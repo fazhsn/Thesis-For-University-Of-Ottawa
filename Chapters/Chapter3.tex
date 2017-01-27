@@ -1,0 +1,53 @@
+\section{Objective}
+
+
+\section{Overview of the Adapted Architecture for VN Embedding using SDN}
+
+	\subsection{Problem Description} 
+		The problem description if you have any mathamatical model.
+
+
+\section{Mathematical Model Adapted for VN Embedding}
+In this section I have shown the example of three ways to include equations in the latex.
+\begin{equation}
+ K_s = (H_s,L_s) 
+\end{equation}
+This equation is characterized by a set of substrate nodes $H_s$ and a set of links $L_s$.\\
+The substrate node \textit{u} $\in H_s$, can be defined by:
+\begin{equation}
+u=\{R_u, S_u, G_u, C_u\}
+\end{equation}
+where, $R_u$, is the Memory, $S_u$ is the storage capacity, $G_u$ is the GPU, and $C_u$ is the CPU capacity of the node $u$.
+The residual CPU, Memory, Storage and GPU capacity is given by,
+$P^{r/s/g/c}_u(t)$ the available memory/RAM, storage, GPU, CPU capacity at time period $t$.
+Hence, at any given time the available node capacity can be defined by a set 
+\begin{equation}
+Q_u = \{ P^r_u(t), P^s_u(t), P^c_u(t), P^g_u(t)\}
+\end{equation}
+A VN request can be represented as $K_v = (H_v, L_v)$ where, $H_v$ represents set of virtual nodes and $L_v$ represents directional Links.
+The QoS requirement of a virtual node $a$ $\in H_v$ can be defined as:
+\begin{equation}
+(QoS)_a = (p_a^r, p_a^s, p_a^g, p_a^c)
+\end{equation}
+$P_a^{r/s/g/c} $ represents required RAM, Storage, GPU and CPU at a selected substrate node for processing the selected VN request. Similarly, for a virtual link $e \in L_v$, can be defined by a set:
+\begin{equation}
+(QoS)_e = (b_e, d_e)
+\end{equation}
+$b_e$ and $d_e$ define the minimum required bandwidth and delay for the selected virtual request respectively.
+$x_a^u$ and $z_n$ are binary variables. $x_a^u$ is $1$ if a virtual node $a$ is assigned to substrate node $u$, 0 otherwise. Similarly, $z_n$ is a binary variable which is 1 if a virtual network request is accepted, 0 otherwise.\par
+$Objective$ $Function:$
+To increase the revenue by maintaining QoS requirement for VN requests, i.e., maximizing profit. Eq (6) defines the objective function.
+ \begin{multline}
+f_{objective} = \sum_{n \in N} \Bigg\{\sum_{e\in L_v; e=(sd)}  P_e^n *z_n - 
+\sum_{ (u,v) \in H_s * H_s} x_s^u * x_d^v * (f_u + f_v + \sum_{l \in \pi(uv)}c_l * b_e)\Bigg\}
+\end{multline}
+
+The option align is good when you have to align multiple equations at certain point. In the given example I have aligned them at assignment operator or comparision operation point. I.e., LHS to RHS point.
+\begin{align} 
+\sum_{c \in C} \lambda_c &\leqslant W \quad &(\alpha_o) \label{eq:3} \\
+\sum_{c \in C} \lambda_c * T_c(u) &\leqslant N_{ROADMs}(u) \quad &(\mu_u) \label{eq:4}\\
+\sum_{c \in C} \lambda_c * a_c^n &\geqslant 1 ; u \in H_s ; n \in N. \quad &(\beta_u) \label{eq:5}
+\end{align}
+
+\section{Summary}
+Summary goes here
