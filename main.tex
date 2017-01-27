@@ -1,0 +1,194 @@
+\documentclass[12pt,english,oneside,letterpaper]{report}
+%\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{subcaption}
+\usepackage{pdfpages}
+\usepackage{placeins}
+%\usepackage[thinlines]{easytable}
+%\pgfplotset{compat=1.8}
+\usepackage{setspace}
+\usepackage{cite}
+\usepackage{graphicx}
+\graphicspath{{Figures/}}
+\usepackage{fancyhdr}
+\pagestyle{headings}
+\usepackage{refstyle}
+\usepackage{subfiles}
+%\usepackage{comment}
+\usepackage{titlesec}
+\titleformat{\chapter}[hang]{\bf\huge}{\thechapter}{2pc}{}
+\usepackage{titletoc}
+\usepackage{tocloft}
+\usepackage{hyperref}
+%\usepackage{comment}
+\usepackage{cleveref}
+%\usepackage{cleveref}
+\usepackage{setspace}
+\usepackage[nottoc]{tocbibind}
+%\usepackage{afterpage}
+%\usepackage{titlesec}
+
+\titleformat*{\chapter}{\LARGE\bfseries}
+\pagenumbering{roman}
+
+\pagestyle{plain}
+\usepackage{morefloats}
+\usepackage{subfiles}
+\usepackage{blindtext}
+\usepackage{amssymb,enumitem}
+\usepackage{amsmath}
+\usepackage[ruled ]{algorithm2e}
+\usepackage{verbatim}
+\usepackage{float}
+\usepackage{overpic}
+\usepackage{array}
+
+\usepackage{blindtext}
+\usepackage{scrextend}
+\RequirePackage[left=3.25cm,right=2.5cm,top=2.5cm,bottom=2.5cm]{geometry}
+
+\renewcommand{\baselinestretch}{1.6}
+
+
+
+\newenvironment{dedication}
+  {\clearpage           % we want a new page
+   \thispagestyle{empty}% no header and footer
+   \vspace*{\stretch{1}}% some space at the top 
+   \itshape             % the text is in italics
+   \centering          % flush to the right margin
+  }
+  {\par % end the paragraph
+   \vspace{\stretch{1}} % space at bottom is three times that at the top
+   \clearpage           % finish off the page
+  }
+
+\begin{document}
+
+\author{Faisal Ameen Zaman}
+\begin{titlepage}
+\begin{center}
+% \vspace*{0.2cm}
+ {\huge \textbf{How To use Latex for Thesis Writing}}
+\vspace*{0.2cm}
+\begin{center}
+{\Large {\textbf{Faisal Ameen Zaman}}} 
+\end{center}
+\vspace*{0.2cm}
+\begin{center}
+{ A thesis submitted to the Faculty of Graduate and Postdoctoral Affairs in partial fulfillment of the requirements for the degree of} 
+\end{center}
+\vspace*{0.2cm}
+\begin{center}
+{\Large {\textbf{Masters Of Applied Science}}} 
+\end{center}
+%\vspace*{0.2cm}
+%\begin{center}
+%{\Large {in}}
+%\end{center}
+%\vspace*{0.2cm}
+\begin{center}
+{ In Electrical and Computer Engineering} 
+\end{center}
+\vspace*{1.0cm}
+\begin{center}
+{Ottawa-Carleton Institute for Electrical and Computer Engineering\\
+School of Electrical Engineering and Computer Science\\
+University of Ottawa\\
+Ottawa, Canada} 
+\end{center}
+%\vspace*{1.0cm}
+\begin{center}
+{ January 2017} 
+\end{center}
+\vspace*{1.0cm}
+
+\begin{center}
+{\textbf{\copyright \ 2017 Faisal Ameen Zaman}} 
+\end{center}
+\end{center}
+\end{titlepage}
+
+
+
+\chapter*{Abstract}
+%VN Embedding\\
+%SDN\\
+%Metro Optical\\
+%Edge Datacenter\\
+%\vspace{-15mm}
+\setcounter{page}{1}
+\addcontentsline{toc}{chapter}{Abstract}
+This is just an example of showing how to use latex for writing the Thesis. I was a master student at University of Ottawa and I found it very useful to write my thesis using Latex. I spent lot of time finding easy methods to perfrom certain things such as conisdering the documentclass as Report or book will give you more flexibility with the packages rather than going as an article, how to write an Algorithm, and How to include image to name a few. I prefer including images in PDF format as it gives clarity and sharpness while printing. I have left couple of images to see how to include pdf as images. I have tried my best to cover everything I know and learnt about latex in this document. Well one thing I have learnt from my research is that one technique optimal for one person is not optimal for another person.\par
+Good Luck !! \par
+
+\chapter*{Acknowledgement}
+\addcontentsline{toc}{chapter}{Acknowledgement}
+\vspace{-12mm}
+This thesis would have remained a dream, had it not been for my Professor Ahmed karmouch. Whose unflinching confidence in my abilities metamorphosed my personality. ``Good, Better, Best. Never let it rest. Till your good is better and your better is best" - St. Jerome. The above quotation is the hallmark of my Professor's work ethics. He always insisted to bring out the best, with a great sense of accomplishment. I would like to express my deepest gratitude to Professor Ahmed karmouch.\par
+I would like to express deepest appreciation and thankfulness to Dr. Abdallah Jarray. His attitude and genius continuously and convincingly through out the research work has enabled me to present this thesis. He inspired, guided and motivated me at all times of research work. I would not have imagined a better advisor and mentor.\par
+My sincere thanks to Heli Amarasinghe, Venkatraman Balasubramanian and Wijay Ekanayake and other Lab colleagues, without their precious support, it would have not been possible to write this thesis. I am deeply indebted to my brother Mohammad Farooq Zaman for his moral support, encouragement and guidance. He has been a pillar of strength to me at all times. My sincere thanks to Hisham Veeran, Mudasser Noor, Yasir Noor, Fazal Noor and Mohammed Riyaz  for their moral support.\par
+My thanks to University of Ottawa for giving me access the resources to carry out my research and write this thesis. I also thank my many friends for their moral support and guidance. I also thank all those who directly or indirectly helped me complete this challenging task.\par
+``As we express our gratitude, we must never forget that the highest appreciation is not to utter words, but to live by them", - John F Kennedy. Sincere thanks to my parents, Rahat Jahan and Badruzzaman for their unconditional love and support.\par
+\clearpage
+
+\begin{dedication}
+Dedicated ToVenkatraman and Heli
+\end{dedication}
+\let\cleardoublepage\clearpage
+%\noindent\makebox[\linewidth]{\rule{\paperwidth}{0.4pt}}
+
+\tableofcontents
+
+\chapter*{List Of Acronyms}
+\addcontentsline{toc}{chapter}{List Of Acronyms}
+\input{Chapters/Acronyms}
+\clearpage
+%\chapter*{List of Table}
+\listoffigures
+%\chapter*{List of Figures}
+\clearpage
+\listoftables
+\clearpage
+%\begin{spacing}{1.5}
+
+%\end{spacing}
+
+%\tableofcontents
+
+%\mainmatter
+% Chapter 1
+\chapter{Introduction}
+\label{chap:one}
+\pagenumbering{arabic}
+\input{Chapters/Chapter1}
+%\pagenumbering{arabic}
+
+
+% Chapter 2
+\chapter{Background and Related Works}
+\label{chap:two}
+\input{Chapters/Chapter2}
+
+%\begin{comment}% Chapter 3
+\chapter{Your Main Contribution Chapter one}
+\label{chap:three}
+\input{Chapters/Chapter3}
+
+
+% Chapter 5
+\chapter{Implementation And Evaluation}
+\label{chap:five}
+\input{Chapters/Chapter5}
+
+
+% Chapter 6
+\chapter{Conclusion And Future Work}
+\label{chap:six}
+\input{Chapters/Chapter6}
+%\cite{one}
+%\end{comment}
+\input{Chapters/reference}
+
+\end{document}
